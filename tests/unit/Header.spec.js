@@ -19,7 +19,8 @@ describe("Header", () => {
 
     it("Renders the correct month", () => {
         let today = new Date();
-        let date = today.toLocaleString("default", { month: "long" }).slice(0, 3).toUpperCase();
+        let date = today.toLocaleString("en", { month: "long" }).substr(0,3).toUpperCase();
+        //console.log(date)
         expect(wrapper.html()).toContain(date)
     })
 
